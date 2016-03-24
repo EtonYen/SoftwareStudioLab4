@@ -4,10 +4,13 @@ import java.util.Random;
 public class Square extends Shape {
 	
 	private int shapeWidth;
+	private int shapeHeight;
 	
 	public Square(int shapeWidth){
 		// TODO Constructor
 		this.shapeWidth = shapeWidth;
+		this.shapeHeight = shapeWidth;
+		
 	}
 	
 	
@@ -17,19 +20,21 @@ public class Square extends Shape {
 		// Java 'Color' class takes 3 floats, from 0 to 1.
 		
 		// TODO Return color produced by three rgb floats.
-		return new Color(r, g, b);
+		Random random = new Random();
+		return new Color(random.nextFloat(), random.nextFloat(), random.nextFloat());
 	}
 	
 	@Override
 	public int getShapeWidth(){
 		// TODO Return Square width
-		return 0;
+		return this.shapeWidth;
+		
 	}
 	
 	@Override
 	public int getShapeHeight(){
 		// TODO Return Square height
-		return 0;
+		return this.shapeHeight;
 	}
 
 
